@@ -1,8 +1,8 @@
 # EECS 583 Final Project : Group 9
 
 ## Team Members
-- Alireza Khadem - <arkhadem@umich.edu>,
-- Ashutosh Mishra - <ashumich@umich.edu>,
+- Alireza Khadem - <arkhadem@umich.edu>
+- Ashutosh Mishra - <ashumich@umich.edu>
 - Steven Schaefer - <stschaef@umich.edu>
 - Sumanth Umesh - <sumanthu@umich.edu>
 
