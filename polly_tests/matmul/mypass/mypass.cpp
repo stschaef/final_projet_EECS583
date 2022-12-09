@@ -1,35 +1,31 @@
-#include "llvm/Analysis/BlockFrequencyInfo.h"
-#include "llvm/Analysis/BranchProbabilityInfo.h"
-#include "llvm/IR/Function.h"
+#include "llvm/Analysis/LoopPass.h"
 #include "llvm/Pass.h"
 #include "llvm/Support/Format.h"
 #include "llvm/Support/raw_ostream.h"
-#include "polly/PolyhedralInfo.h"
+// #include "polly/ScopInfo.h"
+// #include "polly/isl/ast.h"
+#include "polly/ScopPass.h"
 
 using namespace llvm;
 namespace
 {
-  struct HW1 : public FunctionPass
+  struct GetStride : public polly::ScopPass
   {
     static char ID;
 
-    HW1() : FunctionPass(ID) {}
+    GetStride() : polly::ScopPass(ID) {}
 
-    void getAnalysisUsage(AnalysisUsage &AU) const
+    bool runOnScop(Scop &S) override
     {
-      AU.addRequired<BlockFrequencyInfoWrapperPass>();    // Analysis pass to load
-                                                          // block execution count
-      AU.addRequired<BranchProbabilityInfoWrapperPass>(); // Analysis pass to load
-                                                          // branch probability
-    }
+      // auto schedule = S.getSchedule();
+      // auto m = schedule.extract_map(schedule.get_space());
 
-    virtual bool runOnFunction(Function &F) override
-    {
-      errs() << "Function: " << F.getName() << '\n';
+      errs() << S << "\n";
+
       return false;
     }
   };
 } // namespace
-char HW1::ID = 0;
-static RegisterPass<HW1> X("hw1", "HW1 pass", false /* Only looks at CFG */,
-                           false /* Analysis Pass */);
+char GetStride::ID = 0;
+static RegisterPass<GetStride> X("getstride", "GetStride pass", false /* Only looks at CFG */,
+                                 false /* Analysis Pass */);

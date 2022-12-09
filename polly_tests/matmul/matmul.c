@@ -7,50 +7,56 @@ float C[32][128];
 float A1[N];
 float B1[N];
 float C1[N];
-void init_array()
-{
-    int i, j;
+// void init_array()
+// {
+//     int i, j;
 
-    for (i=0; i<N; i++) {
-        for (j=0; j<N; j++) {
-            A[i][j] = (1+(i*j)%1024)/2.0;
-            B[i][j] = (1+(i*j)%1024)/2.0;
-        }
-    }
-}
+//     for (i = 0; i < N; i++)
+//     {
+//         for (j = 0; j < N; j++)
+//         {
+//             A[i][j] = (1 + (i * j) % 1024) / 2.0;
+//             B[i][j] = (1 + (i * j) % 1024) / 2.0;
+//         }
+//     }
+// }
 
-void print_array()
-{
-    int i, j;
+// void print_array()
+// {
+//     int i, j;
 
-    for (i=0; i<N; i++) {
-        for (j=0; j<N; j++) {
-            fprintf(stdout, "%lf ", C[i][j]);
-            if (j%80 == 79) fprintf(stdout, "\n");
-        }
-        fprintf(stdout, "\n");
-    }
-}
+//     for (i = 0; i < N; i++)
+//     {
+//         for (j = 0; j < N; j++)
+//         {
+//             fprintf(stdout, "%lf ", C[i][j]);
+//             if (j % 80 == 79)
+//                 fprintf(stdout, "\n");
+//         }
+//         fprintf(stdout, "\n");
+//     }
+// }
 
 int main()
 {
     int i, j, k;
     double t_start, t_end;
 
-    init_array();
+    // init_array();
 
-    for(i=0; i<N; i++)  {
-        C1[i] = A1[i] + B1[i];
-    }
+    // for(i=0; i<N; i++)  {
+    //     C1[i] = A1[i] + B1[i];
+    // }
 
-    for(i=0; i<32; i++)  {
-        for(j=0; j<128; j++)  {
+    for (i = 0; i < 32; i++)
+    {
+        for (j = 0; j < 128; j++)
+        {
             C[i][j] = 0;
-            for(k=0; k<64; k++)
+            for (k = 0; k < 64; k++)
                 C[i][j] = C[i][j] + A[i][k] * B[k][j];
         }
     }
-
 
     // _pc_set_dim_count(2);
     // _pc_set_dim_length(0, 128);
