@@ -1,8 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/matmul.dir/mypass.cpp.o"
-  "CMakeFiles/matmul.dir/mypass.cpp.o.d"
-  "matmul.dylib"
   "matmul.pdb"
+  "matmul.so"
 )
 
 # Per-language clean rules from dependency scanning.

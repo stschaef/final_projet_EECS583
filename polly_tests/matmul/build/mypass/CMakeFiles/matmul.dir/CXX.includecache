@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/stschaef/final_projet_EECS583/polly_tests/matmul/mypass/mypass.cpp
+llvm/Analysis/BlockFrequencyInfo.h
+/home/stschaef/final_projet_EECS583/polly_tests/matmul/mypass/llvm/Analysis/BlockFrequencyInfo.h
+llvm/Analysis/BranchProbabilityInfo.h
+/home/stschaef/final_projet_EECS583/polly_tests/matmul/mypass/llvm/Analysis/BranchProbabilityInfo.h
+llvm/IR/Function.h
+/home/stschaef/final_projet_EECS583/polly_tests/matmul/mypass/llvm/IR/Function.h
+llvm/Pass.h
+/home/stschaef/final_projet_EECS583/polly_tests/matmul/mypass/llvm/Pass.h
+llvm/Support/Format.h
+/home/stschaef/final_projet_EECS583/polly_tests/matmul/mypass/llvm/Support/Format.h
+llvm/Support/raw_ostream.h
+/home/stschaef/final_projet_EECS583/polly_tests/matmul/mypass/llvm/Support/raw_ostream.h
+polly/ScopInfo.h
+/home/stschaef/final_projet_EECS583/polly_tests/matmul/mypass/polly/ScopInfo.h
+
