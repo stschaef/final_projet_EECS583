@@ -17,4 +17,6 @@ llvm/Support/raw_ostream.h
 /home/stschaef/final_projet_EECS583/polly_tests/matmul/mypass/llvm/Support/raw_ostream.h
 polly/ScopPass.h
 /home/stschaef/final_projet_EECS583/polly_tests/matmul/mypass/polly/ScopPass.h
+polly/ScopInfo.h
+/home/stschaef/final_projet_EECS583/polly_tests/matmul/mypass/polly/ScopInfo.h
 

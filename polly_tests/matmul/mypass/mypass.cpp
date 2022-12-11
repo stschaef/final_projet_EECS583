@@ -5,6 +5,7 @@
 // #include "polly/ScopInfo.h"
 // #include "polly/isl/ast.h"
 #include "polly/ScopPass.h"
+#include "polly/ScopInfo.h"
 
 using namespace llvm;
 namespace
@@ -17,10 +18,21 @@ namespace
 
     bool runOnScop(Scop &S) override
     {
-      // auto schedule = S.getSchedule();
-      // auto m = schedule.extract_map(schedule.get_space());
-
-      errs() << S << "\n";
+      for (auto BB : S.blocks())
+      {
+        for (auto stmt : S.getStmtListFor(BB))
+        {
+          for (auto access : *stmt)
+          {
+            // errs() << "Array : " << access->getArrayId() << "\n";
+            errs() << "IsRead: " << access->isRead() << "\n";
+            errs() << "Element type: " << *(access->getElementType()) << "\n";
+            errs() << "Value: " << *(access->getAccessValue()) << "\n";
+            errs() << "Original Base Addr: " << *(access->getOriginalBaseAddr()) << "\n";
+            // TODO: can the appropriate sizes be read directly from this base addr?
+          }
+        }
+      }
 
       return false;
     }
