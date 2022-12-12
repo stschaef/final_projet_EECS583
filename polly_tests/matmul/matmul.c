@@ -1,9 +1,9 @@
 #include <stdio.h>
 
 #define N 1536
-float A[32][64];
-float B[64][128];
-float C[32][128];
+float A[42][32][64];
+float B[42][64][128];
+float C[42][32][128];
 float A1[N];
 float B1[N];
 float C1[N];
@@ -52,9 +52,9 @@ int main()
     {
         for (j = 0; j < 128; j++)
         {
-            C[i][j] = 0;
+            C[4][i][j] = 0;
             for (k = 0; k < 64; k++)
-                C[i][j] = C[i][j] + A[i][k] * B[k][j];
+                C[4][i][j] = C[4][i][j] + A[4][i][k] * B[4][k][j];
         }
     }
 

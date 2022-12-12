@@ -19,4 +19,6 @@ polly/ScopPass.h
 /home/stschaef/final_projet_EECS583/polly_tests/matmul/mypass/polly/ScopPass.h
 polly/ScopInfo.h
 /home/stschaef/final_projet_EECS583/polly_tests/matmul/mypass/polly/ScopInfo.h
+polly/Support/GICHelper.h
+/home/stschaef/final_projet_EECS583/polly_tests/matmul/mypass/polly/Support/GICHelper.h
 
